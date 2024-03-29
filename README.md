@@ -1,5 +1,4 @@
 Tutorial for dev of the TinyAIoT project group.
-[TOC]
 
 # Introduction to Docker and Kubernetes
 
@@ -8,107 +7,37 @@ Tutorial for dev of the TinyAIoT project group.
 This tutorial is for developers who want to gain hands-on experience with Docker and Kubernetes.
 
 ## Prerequisites:
-
 * 2 CPUs or more
 * 2GB of free memory
 * 20GB of free disk space
 * Internet connection
-Note: This tutorial is an introduction and covers basic concepts. For more information, refer to the official Docker and Kubernetes documentation.
+* Follow installation instructions below
+* Development environment 
+      - e.g. VSCode
+
 ## Installation instructions
-* download latest docker desktop version
+* Download latest docker desktop version
     * [Mac](https://docs.docker.com/desktop/install/mac-install/)   
     * [Windows](https://docs.docker.com/desktop/install/windows-install/)   
 
-# 1. Docker Basics
-
-## What is Docker?
+# 1. Docker
+### What is Docker?
 
 Docker is a platform for containerizing applications. Containers are lightweight, portable units that include everything an application needs to run.
 
-### Creating a Docker image:
+### First Docker Experience
+* After downloading/updating docker desktop, you can now [try a multi-container app tutorial](https://docs.docker.com/guides/walkthroughs/multi-container-apps/#step-6-delete-everything-and-start-over)
+* 
 
-Create a Dockerfile that describes the image configuration.
-Run docker build to build the image.
-Run the container with docker run.
-Example:
-
-### Dockerfile
-
-```python
-FROM python:3.9
-
-WORKDIR /app
-
-COPY requirements.txt .
-
-RUN pip install -r requirements.txt
-
-COPY . .
-
-CMD ["python", "app.py"]
-```
-
-### Build the image
-
-`docker build -t my-app .`
-
-### Run the container
-
-`docker run -it --rm my-app`
-
-## Further information:
-
-Docker documentation: https://docs.docker.com/get-started/
-Docker Hub: https://hub.docker.com/
-
-# 2. Kubernetes Basics
-
+# 2. Kubernetes
 ### What is Kubernetes?
 
 Kubernetes is an open-source platform for container orchestration. It automates the deployment, scaling, and management of containerized applications across multiple servers.
 
-### Basic Kubernetes concepts:
+### First Kubernetes Experience
+* Now [try minikube tutorial](https://minikube.sigs.k8s.io/docs/start/)
 
-* **Pod:** A pod is the smallest unit managed by Kubernetes. It can contain one or more containers.
-* **Deployment:** A deployment defines a desired number of pods and ensures that this number is always available.
-* **Service:** A service abstracts a group of pods and provides a single access point for clients.
-* **Example:**
-
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: my-app
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: my-app
-  template:
-    metadata:
-      labels:
-        app: my-app
-    spec:
-      containers:
-      - name: my-app
-        image: my-app
-        ports:
-        - containerPort: 80
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-app
-spec:
-  selector:
-    matchLabels:
-      app: my-app
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-```
-
-## Further information:
+# Further information:
 
 Kubernetes documentation: https://kubernetes.io/docs/home/
 Kubernetes Tutorials: https://kubernetes.io/docs/tutorials/
