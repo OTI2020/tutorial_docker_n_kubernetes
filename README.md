@@ -1,19 +1,23 @@
-# tutorial_docker_n_kubernetes
-Tutorial for devs of the TinyAIoT project group.
+Tutorial for dev of the TinyAIoT project group.
 [TOC]
+
 # Introduction to Docker and Kubernetes
-## Target audience: 
+
+## Target audience:
+
 This tutorial is for developers who want to gain hands-on experience with Docker and Kubernetes.
 
 ## Prerequisites:
+
 * Basic programming knowledge
 * Access to a computer with a command line
 * Docker and Kubernetes installed (see instructions)
-Note: This tutorial is an introduction and covers basic concepts. For more information, refer to the official Docker and Kubernetes documentation.
+  Note: This tutorial is an introduction and covers basic concepts. For more information, refer to the official Docker and Kubernetes documentation.
+
 ## Installation instructions
 
-
 # 1. Docker Basics
+
 ## What is Docker?
 
 Docker is a platform for containerizing applications. Containers are lightweight, portable units that include everything an application needs to run.
@@ -26,6 +30,7 @@ Run the container with docker run.
 Example:
 
 ### Dockerfile
+
 ```python
 FROM python:3.9
 
@@ -39,16 +44,22 @@ COPY . .
 
 CMD ["python", "app.py"]
 ```
+
 ### Build the image
+
 `docker build -t my-app .`
 
 ### Run the container
+
 `docker run -it --rm my-app`
+
 ## Further information:
+
 Docker documentation: https://docs.docker.com/get-started/
 Docker Hub: https://hub.docker.com/
 
 # 2. Kubernetes Basics
+
 ### What is Kubernetes?
 
 Kubernetes is an open-source platform for container orchestration. It automates the deployment, scaling, and management of containerized applications across multiple servers.
@@ -93,8 +104,10 @@ spec:
     port: 80
     targetPort: 80
 ```
+
 ## Further information:
 
 Kubernetes documentation: https://kubernetes.io/docs/home/
 Kubernetes Tutorials: https://kubernetes.io/docs/tutorials/
+
 # 3.
