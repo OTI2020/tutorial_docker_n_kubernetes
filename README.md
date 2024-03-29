@@ -14,6 +14,7 @@ This tutorial is for developers who want to gain hands-on experience with Docker
 * Follow installation instructions below
 * Development environment 
       - e.g. VSCode
+* Serveral terminals (Terminal or Windows Power Shell)
 
 ## Installation instructions
 * Download latest docker desktop version
