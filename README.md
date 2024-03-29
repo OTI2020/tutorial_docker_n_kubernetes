@@ -11,6 +11,9 @@ This tutorial is for developers who want to gain hands-on experience with Docker
 * Docker and Kubernetes installed (see instructions)
 Note: This tutorial is an introduction and covers basic concepts. For more information, refer to the official Docker and Kubernetes documentation.
 ## Installation instructions
+* download latest docker desktop version
+    * [Mac](https://docs.docker.com/desktop/install/mac-install/)   
+    * [Windows](https://docs.docker.com/desktop/install/windows-install/)   
 
 
 # 1. Docker Basics
