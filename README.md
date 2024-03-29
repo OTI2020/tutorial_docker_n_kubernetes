@@ -6,9 +6,10 @@ Tutorial for devs of the TinyAIoT project group.
 This tutorial is for developers who want to gain hands-on experience with Docker and Kubernetes.
 
 ## Prerequisites:
-* Basic programming knowledge
-* Access to a computer with a command line
-* Docker and Kubernetes installed (see instructions)
+* 2 CPUs or more
+* 2GB of free memory
+* 20GB of free disk space
+* Internet connection
 Note: This tutorial is an introduction and covers basic concepts. For more information, refer to the official Docker and Kubernetes documentation.
 ## Installation instructions
 * download latest docker desktop version
